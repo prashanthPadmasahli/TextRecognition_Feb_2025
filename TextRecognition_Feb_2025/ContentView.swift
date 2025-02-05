@@ -6,16 +6,46 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ContentView: View {
+    @StateObject var viewModel = TextRecognitionViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if let img = viewModel.selectedImage {
+                Image(uiImage: img)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250)
+                    .cornerRadius(10)
+            }
+            
+            PhotosPicker(selection: $viewModel.selectedItem, matching: .images, photoLibrary: .shared()) {
+                Label("Select Image", systemImage: "photo")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .onChange(of: viewModel.selectedItem) { newItem in
+                if let newItem {
+                    viewModel.loadItem(item: newItem)
+                }
+            }
+            
+            if !viewModel.recognizedText.isEmpty {
+                ScrollView {
+                    Text(viewModel.recognizedText)
+                        .padding()
+                }
+                .background(Color(UIColor.secondarySystemBackground))
+                .cornerRadius(10)
+                .padding()
+            }
+            
         }
-        .padding()
     }
 }
 

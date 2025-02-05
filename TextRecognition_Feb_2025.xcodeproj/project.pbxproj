@@ -11,6 +11,7 @@
 		047CF1DD2D534F7A008A6ACB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF1DC2D534F7A008A6ACB /* ContentView.swift */; };
 		047CF1DF2D534F7C008A6ACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047CF1DE2D534F7C008A6ACB /* Assets.xcassets */; };
 		047CF1E22D534F7C008A6ACB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047CF1E12D534F7C008A6ACB /* Preview Assets.xcassets */; };
+		047CF1E92D534FDC008A6ACB /* TextRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF1E82D534FDC008A6ACB /* TextRecognitionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		047CF1DC2D534F7A008A6ACB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		047CF1DE2D534F7C008A6ACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047CF1E12D534F7C008A6ACB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		047CF1E82D534FDC008A6ACB /* TextRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				047CF1DA2D534F7A008A6ACB /* TextRecognition_Feb_2025App.swift */,
 				047CF1DC2D534F7A008A6ACB /* ContentView.swift */,
+				047CF1E82D534FDC008A6ACB /* TextRecognitionViewModel.swift */,
 				047CF1DE2D534F7C008A6ACB /* Assets.xcassets */,
 				047CF1E02D534F7C008A6ACB /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047CF1DD2D534F7A008A6ACB /* ContentView.swift in Sources */,
+				047CF1E92D534FDC008A6ACB /* TextRecognitionViewModel.swift in Sources */,
 				047CF1DB2D534F7A008A6ACB /* TextRecognition_Feb_2025App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +278,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TextRecognition_Feb_2025/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "additonal permission";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Use photo library?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +308,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TextRecognition_Feb_2025/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "additonal permission";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Use photo library?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
